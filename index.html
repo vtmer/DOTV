@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>Defense of the VTMers</title>
+    <style type="text/css">
+        #mylegend{
+            display: none;
+            overflow:hidden;
+            width:800px;
+            height:600px;
+            margin:auto;
+        }
+        #start{
+            width: 800px;
+            height: 600px;
+            margin:auto;
+            background-image: url("./image/start.jpg");
+        }
+        #name {
+            position:relative;
+            top:210px;
+            left:365px;
+            width:180px;
+            height:50px;
+            line-height:50px;
+            border:none;
+            background:rgba(0,0,0,.1);
+            font-size:25px;
+            color:#fff;
+        }
+        #submit {
+            position:relative;
+            top:447px;
+            left:215px;
+            width:130px;
+            height:50px;
+            border:none;
+            background:transparent;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="start">
+        <input type="text" id="name">
+        <input type="button" id="submit" value=" " onclick="start();">
+    </div>
+    <div id="mylegend">loading......</div>
+    <div id="box">
+        <div id="player_box">
+            <p></p>
+            <div class = "hp_box">
+                <span></span>
+            </div>
+        </div>
+        <div id="monster_box">
+            <p></p>
+            <div class = "hp_box">
+                <span></span>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="scripts/lufylegend1.3.2.js"></script>
+<script type="text/javascript" src="scripts/Map.js"></script>
+<script type="text/javascript" src="scripts/Talk.js"></script>
+<script type="text/javascript" src="scripts/Character.js"></script>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+<script type="text/javascript">
+    function start(){
+        player.name = document.getElementById("name").value;
+        document.getElementById('start').style.display = "none";
+        document.getElementById("mylegend").style.display = "block";
+    }
+</script>
+</body>
+</html>
